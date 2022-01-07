@@ -1,0 +1,4 @@
+Django>=3.2,<3.3
+wagtail>=2.15,<2.16
+ipython>=7.31.0		# Bill likes this, for 'pyman shell'.
+
