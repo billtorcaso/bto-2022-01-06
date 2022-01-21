@@ -30,6 +30,11 @@ INSTALLED_APPS = [
 
     'wagtail_transfer',
 
+    'wagtail_photo_gallery',
+    'wagtail.contrib.modeladmin',
+    'wagtail.contrib.routable_page',
+    'generic_chooser',
+
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
