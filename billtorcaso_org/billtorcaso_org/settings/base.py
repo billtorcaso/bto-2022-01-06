@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'search',
     'blog',
 
+    'wagtail_transfer',
+
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -158,6 +160,23 @@ MEDIA_URL = '/media/'
 
 WAGTAIL_SITE_NAME = "billtorcaso_org"
 
+
+# Wagtail-transfer settings   DUMMY INFO AT PRESENT
+
+WAGTAILTRANSFER_SOURCES = {
+    'staging': {
+        'BASE_URL': 'https://staging.example.com/wagtail-transfer/',
+        'SECRET_KEY': '4ac4822149691395773b2a8942e1a472',
+    },
+    'production': {
+       'BASE_URL': 'https://www.example.com/wagtail-transfer/',
+     'SECRET_KEY': 'a36476ffc6af34dc935570d97369eca0',
+  },
+}
+
+WAGTAILTRANSFER_SECRET_KEY = '7cd5de8229be75e1e0c2af8abc2ada7e'
+
+
 # Search
 # https://docs.wagtail.io/en/stable/topics/search/backends.html
 WAGTAILSEARCH_BACKENDS = {
@@ -168,4 +187,4 @@ WAGTAILSEARCH_BACKENDS = {
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'http://billtorcaso.org'
