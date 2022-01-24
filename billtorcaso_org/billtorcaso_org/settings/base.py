@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'home',
     'search',
     'blog',
+    'bt1_photo_gallery',
+    'junk1',
 
     'wagtail_transfer',
 
