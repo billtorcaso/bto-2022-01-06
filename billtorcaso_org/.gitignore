@@ -5,6 +5,9 @@ __pycache__
 *.py[cod]
 *$py.class
 
+# Keep 'original_images', and not the renditions and resized ones.
+media/images/
+
 # C extensions
 *.so
 
