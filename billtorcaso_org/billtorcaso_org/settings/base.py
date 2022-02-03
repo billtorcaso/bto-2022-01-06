@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
 
+    'django_extensions',    # BT added this 2022/02/03
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

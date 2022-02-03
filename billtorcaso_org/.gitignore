@@ -5,6 +5,9 @@ __pycache__
 *.py[cod]
 *$py.class
 
+# Ignore BT's own ./tmp directory
+tmp/
+
 # Keep 'original_images', and not the renditions and resized ones.
 media/images/
 

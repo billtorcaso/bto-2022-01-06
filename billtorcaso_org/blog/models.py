@@ -11,6 +11,17 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
 
+class BlogAllImagesPage(Page):
+    intro = RichTextField(blank=True)
+
+    def get_context(self, request):
+        # Update context to include only published posts, ordered by reverse-chron
+        context = super().get_context(request)
+        all_images = Image.objects.all()
+        context['all_images'] = all_images
+        return context
+
+
 class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
 
@@ -31,8 +42,10 @@ class BlogPage(Page):
     def main_image(self):
         gallery_item = self.gallery_images.first()
         if gallery_item:
+            print(f"main_image(): {gallery_item.caption}")
             return gallery_item.image
         else:
+            print(f"main_image(): None")
             return None
 
     search_fields = Page.search_fields + [
