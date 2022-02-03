@@ -8,6 +8,9 @@ __pycache__
 # Ignore BT's own ./tmp directory
 tmp/
 
+# Ignore any temp files for vi/vim
+**/.??*.swp
+
 # Keep 'original_images', and not the renditions and resized ones.
 media/images/
 
