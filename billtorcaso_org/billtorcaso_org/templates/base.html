@@ -19,8 +19,33 @@
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/billtorcaso_org.css' %}">
 
+        {# BT: this is an experiment #}
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
+            <style>
+                p {
+                    background-color:#D0D0D0;
+                    border:5px solid;
+                    border-style: solid;
+                    border-color:cyan;
+                }
+                body {
+                    class: w3-container;
+                    background-color:#FFFFFF;
+                    border:10px solid;
+                    border-style: solid;
+                    border-color: lightgreen;
+                }
+                #myDIV {
+                    margin: 10px;
+                    padding: 17pix;
+                    border:2px solid;
+                    border-style: dashed;
+                    border-color: red;
+                }
+            </style>
         {% endblock %}
     </head>
 

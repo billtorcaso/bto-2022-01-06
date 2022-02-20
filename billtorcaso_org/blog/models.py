@@ -12,6 +12,24 @@ from wagtail.images.models import Image
 from wagtail.search import index
 
 
+class BlogW3cssExperimentPage(Page):
+    intro = RichTextField(blank=True)
+    body = RichTextField(blank=True)
+
+    def get_context(self, request):
+        # Update context to include only published posts, ordered by reverse-chron
+        context = super().get_context(request)
+        all_images = Image.objects.all().order_by('title')
+        context['all_images'] = all_images
+        context['all_images_count'] = all_images.count()
+        return context
+
+    content_panels = Page.content_panels + [
+        FieldPanel('intro'),
+        FieldPanel('body', classname="full"),
+    ]
+
+
 class BlogAllImagesPage(Page):
     intro = RichTextField(blank=True)
 
