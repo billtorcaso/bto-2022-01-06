@@ -1,5 +1,5 @@
 Django>=3.2,<3.3
-wagtail>=2.16
+wagtail>=2.16.1
 django-extensions>=3.1.5		# Bill likes this, for 'pyman shell_plus'.
 ipython>=8.0.0		            # Bill likes this, for 'pyman shell_plus'.
 
